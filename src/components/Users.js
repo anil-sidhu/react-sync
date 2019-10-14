@@ -6,9 +6,10 @@ class Users extends Component {
         this.state = {
             // users: undefined
         }
-    }
+    } 
     componentDidMount() {
         fetch('http://localhost:3000/users').then((resp) => {
+            console.warn("resp",resp)
             resp.json().then((respData) => {
                 console.warn("respdata", respData)
                 this.setState({ data: respData })
